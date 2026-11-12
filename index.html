@@ -5,7 +5,7 @@
   <script>document.documentElement.classList.add('js')</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>La Curva · Academia de Choferes en Montevideo | Clases de manejo y libreta</title>
-  <meta name="description" content="Academia de choferes La Curva: 15 años formando conductores seguros en Montevideo. Cursos de 15 y 20 clases prácticas, intensivo, a domicilio, clases de actualización y renovación. Hasta 10 cuotas con Mercado Pago. WhatsApp 098 628 378.">
+  <meta name="description" content="Academia de choferes La Curva: 15 años formando conductores seguros en Montevideo. Cursos de 15 y 20 clases prácticas desde $12.490, intensivo, a domicilio, clases de actualización y renovación. Hasta 10 cuotas con Mercado Pago. WhatsApp 098 628 378.">
   <meta name="theme-color" content="#0f0f12">
   <meta name="robots" content="index,follow">
   <meta name="format-detection" content="telephone=no">
@@ -53,6 +53,7 @@
       "name": "Cursos de manejo",
       "itemListElement": [
         { "@type": "Offer", "name": "Promo: médico + libreta + curso 15 clases", "description": "Examen médico, pago de libreta y curso de 15 clases prácticas. 10 cuotas de $1.950 con Mercado Pago.", "priceCurrency": "UYU" },
+        { "@type": "Offer", "name": "Pack 1 · Curso 15 clases (2 h por semana)", "price": "12490", "priceCurrency": "UYU" },
         { "@type": "Offer", "name": "Pack 2 · Curso completo 15 clases (3 h por semana)", "price": "13490", "priceCurrency": "UYU" },
         { "@type": "Offer", "name": "Pack 3 · Intensivo 15 clases (5 h por semana)", "price": "15500", "priceCurrency": "UYU" },
         { "@type": "Offer", "name": "Pack 4 · Curso a domicilio 15 clases", "price": "15500", "priceCurrency": "UYU" },
@@ -280,8 +281,31 @@
         </div>
 
         <div class="courses__grid" data-pay-mode="contado" aria-live="polite">
-          <!-- Pack 2 -->
+          <!-- Pack 1 -->
           <article class="course reveal">
+            <span class="course__badge">Mejor precio</span>
+            <header class="course__head">
+              <span class="course__pack">Pack 1</span>
+              <h3 class="course__name">Curso a tu ritmo</h3>
+              <p class="course__desc">Las 15 clases del curso completo, de a 2 horas por semana. Ideal si tenés poco tiempo libre.</p>
+            </header>
+            <ul class="course__specs">
+              <li><strong>15</strong> clases prácticas</li>
+              <li><strong>2 h</strong> por semana</li>
+            </ul>
+            <div class="course__price">
+              <div class="price" data-mode="contado"><span class="price__main">$12.490</span><span class="price__note">Efectivo o transferencia</span></div>
+              <div class="price" data-mode="mp"><span class="price__main"><small>10 cuotas de</small> $1.360</span><span class="price__note">Con Mercado Pago</span></div>
+              <div class="price" data-mode="propia">
+                <span class="price__main"><small>2 cuotas de</small> $6.800</span>
+                <span class="price__note">o <strong>3 cuotas de $4.550</strong></span>
+              </div>
+            </div>
+            <a class="btn btn--dark btn--block" href="https://wa.me/59898628378" data-wa="¡Hola La Curva! Me interesa el Pack 1 · Curso de 15 clases (2 h por semana)." target="_blank" rel="noopener">Consultar por este curso</a>
+          </article>
+
+          <!-- Pack 2 -->
+          <article class="course reveal" style="--d:.06s">
             <header class="course__head">
               <span class="course__pack">Pack 2</span>
               <h3 class="course__name">Curso completo</h3>
@@ -303,7 +327,7 @@
           </article>
 
           <!-- Pack 3 -->
-          <article class="course reveal" style="--d:.08s">
+          <article class="course reveal" style="--d:.12s">
             <span class="course__badge">Intensivo</span>
             <header class="course__head">
               <span class="course__pack">Pack 3</span>
@@ -323,7 +347,7 @@
           </article>
 
           <!-- Pack 4 -->
-          <article class="course course--featured reveal" style="--d:.16s">
+          <article class="course course--featured reveal" style="--d:.18s">
             <span class="course__badge course__badge--light">Te buscamos</span>
             <header class="course__head">
               <span class="course__pack">Pack 4</span>
@@ -679,7 +703,7 @@
           </details>
           <details class="faq-item reveal">
             <summary><span>¿Puedo pagar el curso en cuotas?</span><i aria-hidden="true"></i></summary>
-            <div class="faq-item__body"><p>Sí. Todos los cursos se pueden pagar en 10 cuotas con Mercado Pago. Además, el Pack 2 y el Pack 5 tienen financiación propia de la academia en 2, 3 o 4 cuotas. Mirá el detalle en <a href="#cursos">Cursos y precios</a>.</p></div>
+            <div class="faq-item__body"><p>Sí. Todos los cursos se pueden pagar en 10 cuotas con Mercado Pago. Además, los Packs 1, 2 y 5 tienen financiación propia de la academia en 2, 3 o 4 cuotas. Mirá el detalle en <a href="#cursos">Cursos y precios</a>.</p></div>
           </details>
           <details class="faq-item reveal">
             <summary><span>¿Me pueden pasar a buscar?</span><i aria-hidden="true"></i></summary>
@@ -758,6 +782,7 @@
               <select id="f-course" name="curso" required>
                 <option value="">Elegí una opción</option>
                 <option>Promo: médico + libreta + 15 clases (10 x $1.950)</option>
+                <option>Pack 1 · Curso a tu ritmo 15 clases (2 h por semana)</option>
                 <option>Pack 2 · Curso completo 15 clases</option>
                 <option>Pack 3 · Intensivo 15 clases</option>
                 <option>Pack 4 · A domicilio 15 clases</option>

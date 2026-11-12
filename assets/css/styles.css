@@ -497,7 +497,10 @@ ul, ol { padding: 0; list-style: none; }
   .pay-switch__options button { padding: .6rem .4rem; font-size: .8rem; white-space: normal; line-height: 1.15; }
 }
 
-.courses__grid { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); align-items: stretch; }
+.courses__grid { --gap: 1.1rem; display: flex; flex-wrap: wrap; justify-content: center; gap: var(--gap); }
+.courses__grid > .course { flex: 0 1 calc((100% - 2 * var(--gap)) / 3); min-width: 0; }
+@media (max-width: 1000px) { .courses__grid > .course { flex-basis: calc((100% - var(--gap)) / 2); } }
+@media (max-width: 640px) { .courses__grid > .course { flex-basis: 100%; } }
 .course {
   position: relative; display: flex; flex-direction: column; gap: 1.3rem;
   background: #fff; border-radius: var(--r-lg); padding: 1.9rem 1.6rem 1.6rem;
@@ -513,14 +516,14 @@ ul, ol { padding: 0; list-style: none; }
 .course--featured .course__pack { color: #ff8a9c; }
 
 .course__badge {
-  position: absolute; top: 1.3rem; right: 1.3rem;
+  position: absolute; top: 1.55rem; right: 1.1rem;
   font-family: var(--f-display); font-stretch: 106%; font-size: .68rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
   background: var(--red-soft); color: var(--crimson); padding: .35rem .6rem; border-radius: 6px;
 }
 .course__badge--light { background: var(--cone); color: var(--ink); }
 .course__head { display: grid; gap: .45rem; }
 .course__pack { font-family: var(--f-display); font-stretch: 108%; font-weight: 800; font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; color: var(--crimson); }
-.course__name { font-family: var(--f-display); font-stretch: 104%; font-weight: 800; font-size: 1.55rem; line-height: 1.08; letter-spacing: -.015em; padding-right: 4.5rem; }
+.course__name { font-family: var(--f-display); font-stretch: 104%; font-weight: 800; font-size: 1.55rem; line-height: 1.08; letter-spacing: -.015em; }
 .course__desc { color: var(--graphite); font-size: .95rem; line-height: 1.5; }
 .course__specs { display: grid; grid-template-columns: 1fr 1fr; border-block: 1px solid var(--line); }
 .course__specs li { padding: .85rem 0; font-size: .85rem; color: var(--graphite); line-height: 1.2; }
